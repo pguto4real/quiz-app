@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const EndScreen = () => {
+const EndScreen = () => {
   return (
     <div>EndScreen</div>
   )
 }
+
+export default EndScreen

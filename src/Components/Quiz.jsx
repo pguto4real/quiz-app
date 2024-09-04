@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const Quiz = () => {
+const Quiz = () => {
   return (
     <div>Quiz</div>
   )
 }
+
+export default Quiz
