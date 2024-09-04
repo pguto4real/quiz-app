@@ -7,7 +7,7 @@ const MainMenu = () => {
     
       
 
-          <button className="btn btn-primary" onClick={()=>setGameState('quiz')}>Start Quiz</button>
+          <button className="btn btn-primary" onClick={()=>setGameState('category')}>Start Quiz</button>
         
    
   )

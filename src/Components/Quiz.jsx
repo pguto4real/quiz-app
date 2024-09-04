@@ -44,7 +44,7 @@ console.log(Questions.length)
                 ))
             }
             {finalQuestion
-            ?<button className={`btn btn__quiz ${optionChosen === ''  ?'btn-disabled':'btn-neutral'}`}onClick={()=>nextQuestion()}>End Quiz</button>
+            ?<button className={`btn btn__quiz ${optionChosen === ''  ?'btn-disabled':'btn-neutral'}`} onClick={()=>nextQuestion()}>End Quiz</button>
             :<button className={`btn btn__quiz ${optionChosen === ''  ?'btn-disabled':'btn-neutral'}`} onClick={()=>nextQuestion()}>Next Question</button>}
             
         </div>

@@ -32,3 +32,21 @@ export const Questions = [
     answer: "Java",
   },
 ];
+
+export const Categories = [
+  
+    "Linux",
+"DevOps",
+"Networking",
+"Cloud",
+"Docker",
+"Kubernetes",
+];
+
+export const Difficulties = [
+  
+  "Easy",
+"Medium",
+"Hard",
+
+];
