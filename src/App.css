@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 .card{
-    @apply bg-[#bebebe] items-center justify-center
+    @apply bg-[#bebebe] items-center justify-center p-5
 }
 .btn{
     @apply w-[300px] h-[50px] m-[5px] border-none text-[20px] cursor-pointer
 }
 
 .btn__quiz{
-    @apply w-[100%] h-[50px] m-[5px] border-none text-[20px] cursor-pointer
+    @apply  h-auto w-auto m-[5px] border-none text-[20px] cursor-pointer min-w-28
 }
 .btn__indicator{
     @apply w-auto

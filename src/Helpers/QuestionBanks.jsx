@@ -34,19 +34,19 @@ export const Questions = [
 ];
 
 export const Categories = [
-  
-    "Linux",
-"DevOps",
-"Networking",
-"Cloud",
-"Docker",
-"Kubernetes",
+  "Linux",
+  "DevOps",
+  "Docker",
+  "Cloud",
+  "Networking",
+  "Kubernetes",
+  "Kuberned",
 ];
 
 export const Difficulties = [
-  
+
   "Easy",
-"Medium",
-"Hard",
+  "Medium",
+  "Hard",
 
 ];

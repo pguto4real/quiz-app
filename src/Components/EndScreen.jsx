@@ -2,13 +2,14 @@ import React, { useContext } from 'react'
 import { QuizContext } from '../Helpers/Context'
 import { Questions } from '../Helpers/QuestionBanks'
 export const EndScreen = () => {
-    const { score, setScore, setGameState } = useContext(QuizContext)
-    const question_length = Questions.length
+    const { score, setScore, setGameState,questions } = useContext(QuizContext)
+    const question_length = questions.length
     const handleRestart = () => {
 
         setScore(0)
         setGameState('menu')
     }
+    console.log(questions)
     const passed = (score > question_length/2) 
 
     return (

@@ -1,11 +1,14 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { QuizContext } from '../Helpers/Context'
+import GetQuestions from '../Hooks/GetQuestions'
+
 
 const MainMenu = () => {
-    const {gameState,setGameState} = useContext(QuizContext)
+   
+    const {gameState,setGameState,setQuestions,questions} = useContext(QuizContext)
+
   return (
-    
-      
+
 
           <button className="btn btn-primary" onClick={()=>setGameState('category')}>Start Quiz</button>
         

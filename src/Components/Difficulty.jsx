@@ -21,7 +21,7 @@ export const Difficulty = () => {
                 {/* <input type="radio" name="radio-2" className="radio radio-primary" /> */}
 
             </div>
-            <button className={`btn ${difficulty === '' ? 'btn-disabled' : 'btn-neutral'}`} onClick={() => setGameState("quiz")}>Select Difficulty</button>
+            <button className={`btn ${difficulty === '' ? 'btn-disabled' : 'btn-neutral'}`} onClick={() => setGameState("limit")}>Select Difficulty</button>
         </>
 
     )
