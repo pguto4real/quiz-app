@@ -1,11 +1,11 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { QuizContext } from '../Helpers/Context'
-import GetQuestions from '../Hooks/GetQuestions'
+
 
 
 const MainMenu = () => {
    
-    const {gameState,setGameState,setQuestions,questions} = useContext(QuizContext)
+    const {setGameState} = useContext(QuizContext)
 
   return (
 

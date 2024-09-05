@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Difficulties } from '../Helpers/QuestionBanks'
+
 import { QuizContext } from '../Helpers/Context'
 export const Limit = () => {
 

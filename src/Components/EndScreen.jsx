@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { QuizContext } from '../Helpers/Context'
-import { Questions } from '../Helpers/QuestionBanks'
 export const EndScreen = () => {
     const { score, setScore, setGameState,questions } = useContext(QuizContext)
     const question_length = questions.length

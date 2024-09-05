@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 // import { Questions } from '../Helpers/QuestionBanks'
 import { QuizContext } from '../Helpers/Context'
-import getQuestions from '../Hooks/GetQuestions'
+
 import GetQuestions from '../Hooks/GetQuestions'
 
 export const Quiz = () => {
