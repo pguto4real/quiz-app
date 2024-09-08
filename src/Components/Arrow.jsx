@@ -4,7 +4,7 @@ import { IoArrowBackSharp } from "react-icons/io5";
 export const Arrow = ({ functionData ,prev}) => {
 
   return (
-    <div className='px-5 border flex items-start w-full cursor-pointer' onClick={()=>functionData(prev)}>
+    <div className='px-5 flex items-start w-full cursor-pointer' onClick={()=>functionData(prev)}>
         <IoArrowBackSharp size='40px'/>
         </div>
   );
