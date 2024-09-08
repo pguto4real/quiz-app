@@ -40,7 +40,6 @@ export const Categories = [
   "Cloud",
   "Networking",
   "Kubernetes",
-  "Kuberned",
 ];
 
 export const Difficulties = [

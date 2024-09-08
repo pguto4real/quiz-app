@@ -13,17 +13,17 @@ export const EndScreen = () => {
 
     return (
         <div className='Quiz'>
-            <div className="indicator">
-                <div className="indicator-item indicator-bottom w-6">
+            <div className="indicator flex-col items-center">
+                <div className="">
                     <button className={`btn btn__indicator ${passed  ?'btn-success':'btn-error'}`}>{passed?"Passed":"Fail"}</button>
                 </div>
-                <div className="card border bg-white rounded-md">
-                    <div className="card-body bg-white rounded-sm">
+             
+                    <div className="card-body  items-center">
                         <h2 className="card-title">Quiz Finished</h2>
                         <p>You Scored : {score} Out of {question_length} Questions</p>
                         <button className="btn btn__quiz btn-active" onClick={handleRestart}>Restart Quiz</button>
                     </div>
-                </div>
+               
             </div>
 
         </div>

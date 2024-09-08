@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { QuizContext } from '../Helpers/Context'
 
 import GetQuestions from '../Hooks/GetQuestions'
+import { Arrow } from './Arrow'
 
 export const Quiz = () => {
     const { category, difficulty, questions, score, setScore, setGameState, setQuestions, limit } = useContext(QuizContext)
@@ -31,9 +32,9 @@ export const Quiz = () => {
     }
     else if (questions.length < 1) {
         return <>
-        <div><span className=" font-semibold text-[20px]">No Question Found</span></div>
-         <button className="btn btn__quiz btn-active" onClick={handleRestart}>Restart Quiz</button>
-        </> 
+            <div><span className=" font-semibold text-[20px]">No Question Found</span></div>
+            <button className="btn btn__quiz btn-active" onClick={handleRestart}>Restart Quiz</button>
+        </>
     }
     else {
 
@@ -68,26 +69,28 @@ export const Quiz = () => {
 
 
         return (
+            <>
+                <Arrow functionData={setGameState} prev='limit' />
+                <div className='Quiz flex flex-col items-center m-10'>
+                    <div className='font-semibold uppercase px-10 py-2 text-[#d7dde4] bg-[#2b3440]'>
+                        Question {currentQuestion + 1} of {questions.length}
+                    </div>
+                    <h1 className='text-center text-2xl font-bold mb-2'>{current_question?.question}</h1>
+                    {
+                        filteredAnswers.map((value) => (
 
-            <div className='Quiz flex flex-col items-center'>
-                <div className='font-semibold uppercase px-10 py-2 text-[#d7dde4] bg-[#2b3440]'>
-                    Question {currentQuestion + 1} of {questions.length}
+                            <button className="btn btn__quiz btn-primary" onClick={() => setOptionChosen(value[0])}>{value[1]}</button>
+
+                        ))
+                    }
+                    {
+                        finalQuestion
+                            ? <button className={`btn btn__quiz ${optionChosen === '' ? 'btn-disabled' : 'btn-neutral'}`} onClick={() => nextQuestion()}>End Quiz</button>
+                            : <button className={`btn btn__quiz ${optionChosen === '' ? 'btn-disabled' : 'btn-neutral'}`} onClick={() => nextQuestion()}>Next Question</button>
+                    }
+
                 </div>
-                <h1 className='text-center text-2xl font-bold mb-2'>{current_question?.question}</h1>
-                {
-                    filteredAnswers.map((value) => (
-
-                        <button className="btn btn__quiz btn-primary" onClick={() => setOptionChosen(value[0])}>{value[1]}</button>
-
-                    ))
-                }
-                {
-                    finalQuestion
-                        ? <button className={`btn btn__quiz ${optionChosen === '' ? 'btn-disabled' : 'btn-neutral'}`} onClick={() => nextQuestion()}>End Quiz</button>
-                        : <button className={`btn btn__quiz ${optionChosen === '' ? 'btn-disabled' : 'btn-neutral'}`} onClick={() => nextQuestion()}>Next Question</button>
-                }
-
-            </div>
+            </>
         )
     }
 

@@ -5,6 +5,9 @@
 .card{
     @apply bg-[#bebebe] items-center justify-center p-5
 }
+.card__inner{
+    @apply rounded
+}
 .btn{
     @apply w-[300px] h-[50px] m-[5px] border-none text-[20px] cursor-pointer
 }
@@ -15,3 +18,18 @@
 .btn__indicator{
     @apply w-auto
 }
+.cat_disable
+{
+   --tw-text-opacity: 0.7 !important;
+}
+@layer utilities {
+    .no-spinner::-webkit-outer-spin-button,
+    .no-spinner::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  
+    .no-spinner {
+      -moz-appearance: textfield; /* Removes arrows in Firefox */
+    }
+  }

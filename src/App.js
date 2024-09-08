@@ -19,7 +19,8 @@ function App() {
   return (
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
-        <div className="card w-auto h-[500px] min-w-96">
+        <div className="card w-auto h-auto min-h-100 min-w-96 z-10">
+          <div className="bg-sky-400 m-5  flex flex-col items-center card__inner">
           <QuizContext.Provider
             value={{
               gameState,
@@ -43,6 +44,7 @@ function App() {
             {gameState === "quiz" && <Quiz />}
             {gameState === "endScreen" && <EndScreen />}
           </QuizContext.Provider>
+          </div>
         </div>
       </div>
     </div>
