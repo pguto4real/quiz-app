@@ -8,7 +8,7 @@ export const EndScreen = () => {
     setScore(0);
     setGameState("menu");
   };
-  console.log(questions);
+
   const passed = score > question_length / 2;
 
   return (
@@ -24,7 +24,7 @@ export const EndScreen = () => {
           </button>
         </div>
 
-        <QuizFinished />
+        <QuizFinished score={score}/>
       </div>
     </div>
   );
