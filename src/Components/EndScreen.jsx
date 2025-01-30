@@ -24,7 +24,7 @@ export const EndScreen = () => {
           </button>
         </div>
 
-        <QuizFinished score={score}/>
+        <QuizFinished onRestart={handleRestart} />
       </div>
     </div>
   );

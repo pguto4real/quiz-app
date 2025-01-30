@@ -1,9 +1,12 @@
 import React, { useContext } from "react";
 import { QuizContext } from "../Helpers/Context";
 
-export const QuizFinished = () => {
+export const QuizFinished = ({ onRestart }) => {
   const { score, setScore, setGameState, questions } = useContext(QuizContext);
   const question_length = questions.length;
+  const handleRestart = () => {
+    onRestart();
+  };
   return (
     <div className="card-body  items-center">
       <h2 className="card-title">Quiz Finished</h2>
