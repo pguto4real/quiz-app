@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { QuizContext } from "../Helpers/Context";
 
 export const QuizFinished = ({ onRestart }) => {
-  const { score, setScore, setGameState, questions } = useContext(QuizContext);
+  const { score, questions } = useContext(QuizContext);
   const question_length = questions.length;
   const handleRestart = () => {
     onRestart();
